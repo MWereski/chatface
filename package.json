@@ -28,7 +28,7 @@
     "bingmaps": "^2.0.3",
     "core-js": "^3.6.5",
     "font-awesome": "^4.7.0",
-    "jquery": "^1.9.1",
+    "jquery": "^3.5.0",
     "json-loader": "^0.5.7",
     "leaflet": "1.5.1",
     "ng2-search-filter": "^0.5.1",
