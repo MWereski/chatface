@@ -1,0 +1,13 @@
+<form #postForm="ngForm" novalidate>
+
+    <div class="form-group">
+        <label>Opowiedz nam</label>
+        <textarea class="content" name="content" maxlength="300" [(ngModel)]="postModel.content"></textarea>
+    </div>
+
+    <div class="button-container">
+        <button type="button" class="button--success" mat-raised-button (click)="addPost()" mat-dialog-close>Dodaj</button>
+        <button type="button" mat-raised-button color="warn" mat-dialog-close>Anuluj</button>
+    </div>
+ 
+</form>

@@ -1,0 +1,7 @@
+{
+    "/hubs/*": {
+        "target": "http://192.168.6.5:5533",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

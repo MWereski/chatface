@@ -1,0 +1,8 @@
+<mat-list class="list">
+    <h2 class="list-title">Lista znajomych</h2>
+    <mat-list-item class="list-item" *ngFor="let friend of friendsList" (click)="openChat(friend.id)">
+        <div class="user-name">{{friend.friendUser.firstname}} {{friend.friendUser.surname}}</div>
+        <div [class.status__red]="!friend.friendUser.ifOnline"></div>
+    </mat-list-item>
+</mat-list>
+

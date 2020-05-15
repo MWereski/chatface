@@ -1,0 +1,32 @@
+@import '../../styles.scss';
+
+.list {
+    background-color: $background;
+    min-height: 100vh;
+
+    .list-title {
+        text-align:center;
+        padding-top:20px;
+    }
+
+    .container {
+        background: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        width:60%;
+        margin:0 auto;
+        padding: 10px;
+
+        .list-item {
+            width: 200px;
+            border: 1px solid #c2bfbf;
+            border-radius: 5px;
+        }
+    }
+
+    
+    
+
+
+}

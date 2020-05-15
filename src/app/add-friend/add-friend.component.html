@@ -1,0 +1,33 @@
+<mat-tab-group mat-align-tabs="center" class="menu-tab-container">
+    <mat-tab label="Dodaj znajomego" class="menu-tab">
+        <div class="page--container">
+            <h2 class="title">Może kogoś znasz ?</h2>
+            <cdk-virtual-scroll-viewport itemSize="200" class="container">
+                <mat-card *cdkVirtualFor="let user of userList" class="user-card">
+                    <mat-card-header>
+                        <mat-card-title>{{ user.firstname }} {{ user.surname }}</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content class="card-content-container">
+                        <p class="card-content">Wiek: {{ user.age }}</p>
+                        <p class="card-content">Miejscowość: {{ user.province }}, {{ user.city }} </p>
+                        <p class="card-content">Zainteresowania: {{ user.userInterests.interest }} </p>
+                    </mat-card-content>
+                    <mat-divider [inset]="true" ></mat-divider>
+                    <mat-card-actions>
+                        <button mat-flat-button class="button--success" (click)="addFriend(user.id)"><mat-icon>add</mat-icon></button>
+                    </mat-card-actions>
+                </mat-card>
+            </cdk-virtual-scroll-viewport>
+        </div>
+    </mat-tab>
+    <mat-tab label="Wyszukaj znajomego" class="menu-tab">
+        <!-- mapka -->
+        <div class="map-container">
+            <div class="map-frame">
+              <div id="map" leaflet (leafletMapReady)="onMapReady($event)"></div>
+            </div>
+          </div>
+    </mat-tab>
+</mat-tab-group>
+
+

@@ -1,0 +1,27 @@
+<nav>
+    <div class="menu-list">
+        <div class="menu-list--left">
+            <a routerLink="/main"><button class="button--color__white" mat-button (click)="changeContainer(0)">Strona główna</button></a>
+            <a><button class="button--color__white" mat-button (click)="changeContainer(1)">Szukaj znajomych</button></a>
+            <!-- Przycisk poniżej do usunięcia 
+            <button (click)="login('5b712e9b-211d-4c0c-80b9-854df683e4e7')">Zaloguj się</button>-->
+        </div>
+        <div class="menu-list--right">
+          <!-- <img src="#" alt="profile photo"> -->
+          <mat-icon class="icon__white">person</mat-icon>
+          <p>{{userData.firstname}}</p>  
+          <button mat-icon-button [matMenuTriggerFor]="menu"> <mat-icon class="icon__white">settings</mat-icon> </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item (click)="changeContainer(2)">
+                <span>Profil</span>
+              </button>
+              <button mat-menu-item>
+                <span>Tryb ciemny</span>
+              </button>
+              <button mat-menu-item (click)="_authService.logoutUser()">
+                <span>Wyloguj się</span>
+              </button>
+            </mat-menu>
+        </div>
+    </div>
+</nav>

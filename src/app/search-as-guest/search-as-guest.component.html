@@ -1,0 +1,24 @@
+<div class="container login-container">
+    <div class="login-form-1">
+        <h2>Szukaj</h2>
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Poszukaj znajomych">
+    <table class="table table-striped">
+      <tbody>
+        <tr>
+          <th>Fota</th>
+          <th>Imię</th>
+          <th>Nazwisko</th>
+          <th>Wiek</th>
+        </tr>
+      <tr *ngFor="let user of users | filter:searchText; let i=index">
+
+            <td *ngIf='i<5'>{{user.photo}}</td>
+            <td *ngIf='i<5'>{{user.firstname}}</td>
+            <td *ngIf='i<5'>{{user.surname}}</td>
+            <td *ngIf='i<5'>{{user.age}}</td>
+          
+      </tr>
+      </tbody>
+    </table>
+    </div>
+</div>

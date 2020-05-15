@@ -1,0 +1,77 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- 
+<div class="row pt-2">
+    <div class="col-md-6 mx-auto">
+        <div class="card rounded-0">
+            <div class="class-header">
+                <h3 class="mb-0">Login</h3>
+            </div>
+
+            <div class="card-body">
+                <form class="form">
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input [(ngModel)]="loginUserData.email" name="email1" type="text" class="form-control rounded-0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Password</label>
+                        <input [(ngModel)]="loginUserData.password" name="password1" type="password" class="form-control rounded-0" required>
+                    </div>
+
+                    <button (click)="loginUser()" type="button" class="btn btn-success float-right">Login</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      Tabs Titles 
+  
+     Icon 
+      <div class="fadeIn first">
+      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+      </div>
+  
+     Login Form 
+      <form>
+        <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+        <input [(ngModel)]="loginUserData.email" id="login" class="fadeIn second" name="email1" type="text" placeholder="email" required>
+       <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+        <input [(ngModel)]="loginUserData.password" id="password" class="fadeIn third" name="password1" type="password" placeholder="password" required>
+        <input type="submit" class="fadeIn fourth" value="Log In">
+      </form>
+  
+    Remind Passowrd
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Forgot Password?</a>
+      </div>
+  
+    </div>
+  </div>
+-->
+
+<div class="container login-container">
+        <div class="login-form-1">
+            <h2>Login</h2>
+            <form>
+                <div class="form-group">
+                    <!--<input type="text" class="form-control" placeholder="Your Email *" value="" /> -->
+                    <input [(ngModel)]="loginUserData.email" value="" class="form-control" name="email1" type="text" placeholder="Email *" required>
+                </div>
+                <div class="form-group">
+                    <!--<input type="password" class="form-control" placeholder="Your Password *" value="" /> -->
+                    <input [(ngModel)]="loginUserData.password" value="" class="form-control" name="password1" type="password" placeholder="Hasło *" required>
+                </div>
+                <div class="form-group">
+                    <input (click)="loginUser()" type="submit" class="btnSubmit" value="Login" />
+                </div>
+                <div class="form-group">
+                    <p class="Alert" class="alerts">{{Alert}}</p>
+                </div>
+            </form>
+</div>

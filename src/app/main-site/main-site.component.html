@@ -1,0 +1,15 @@
+<!--<app-menu (menuEvent)="changeContent($event)"></app-menu>--> 
+<app-menu *ngIf='_auth.loged()' (menuEvent)="changeContent($event)"></app-menu>
+<div class="container" [ngSwitch]="menuOption">
+    <div class="main-page--container" *ngSwitchCase="0">
+        <app-post-list></app-post-list>
+        <app-friend-list [friendId]="chatUserId" (friendClicked)="openChat($event)"></app-friend-list>
+        <app-chat [userId]="chatUserId" (closeChatClicked)="closeChat()"></app-chat>
+    </div>
+    <div class="add-friend--container" *ngSwitchCase="1">
+        <app-add-friend></app-add-friend>
+    </div>
+    <div class="profile--container" *ngSwitchCase="2">
+        <app-profile></app-profile>
+    </div>
+</div>

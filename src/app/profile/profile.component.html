@@ -1,0 +1,10 @@
+<mat-list class="list">
+    <h2 mat-list-title class="list-title">Znajomi ( {{friendList.length}} )</h2>
+    <div class="container">
+        <mat-list-item class="list-item" *ngFor="let friend of friendList">
+            <mat-icon>person</mat-icon>
+            <div class="user-name">{{friend.friendUser.firstname}} {{friend.friendUser.surname}}</div>
+        </mat-list-item>
+    </div>
+    <button mat-raised-button></button>
+</mat-list>

@@ -1,0 +1,26 @@
+
+<!--<input type="text" class="write_msg" [value]="txtMessage"  
+(input)="txtMessage=$event.target.value" (keydown.enter)="sendMessage()" placeholder="Type a message" />  
+
+<br />              
+<tbody>
+  <tr *ngFor="let message of recievedMessages">
+      <td>{{message}}</td>
+  </tr>
+</tbody>
+-->
+<div class="container login-container">
+  <h2>Welcome to ChatFace</h2>
+  <div class="login-form-1">
+      
+          <tbody class="messCont">
+            <tr *ngFor="let message of recievedMessages">
+                <td><span  class = "mess">#{{myNumber}}:</span> {{message}}</td>
+            </tr>
+          </tbody>
+          </div>
+          <input type="text" class="form-control" [value]="txtMessage"  
+          (input)="txtMessage=$event.target.value" (keydown.enter)="sendMessage()" placeholder="Type a message" maxlength="50" />
+          <button class="btnSubmit" type="button"  (click)="sendMessage()"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button> 
+</div>
+

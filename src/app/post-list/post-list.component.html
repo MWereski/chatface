@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="title-container">
+        <span>Opowiedź nam co Ci się ostatnio przytrafiło !</span>
+        <button mat-raised-button color="primary" (click)="openAddPostDialog()">Dodaj post</button>
+    </div>
+
+    <mat-card class="post-container" *ngFor="let post of posts; let i=index">
+        <mat-card-title>{{post.user.firstname}} {{post.user.surname}}</mat-card-title>
+        <mat-card-subtitle>{{post.creationDateTime | date:'short'}}</mat-card-subtitle>
+        <mat-card-content>{{post.content}}</mat-card-content>
+        <mat-card-actions align="end">
+            <button mat-button class="card-button"><mat-icon>thumb_up</mat-icon> Polub</button>
+            <button mat-button class="card-button"><mat-icon>add_comment</mat-icon> Skomentuj</button>
+        </mat-card-actions>
+        <mat-card-footer>
+            <button mat-button class="card-button">Komentarz: {{post.postComs.length}}</button>
+        </mat-card-footer>
+    </mat-card>
+</div>

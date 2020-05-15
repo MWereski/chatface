@@ -1,0 +1,101 @@
+<div class="container login-container">
+    <div class="login-form-1">
+        <h2>Register</h2>
+        <form>
+            <div class="form-group">
+                        <div *ngIf="offFirstName.errors; else elseBlockName" class="form-group">
+                            <p class="Alert" class="alerts">{{nameAlert}}</p>
+                        </div>
+                    <ng-template #elseBlockName>
+                        <div class="form-group">
+                            <p class="Alert" class="passes">{{namePass}}</p>
+                        </div>
+                    </ng-template>
+                <input [(ngModel)]="registerUserData.firstname" value="" name="firstname" type="text" class="form-control rounded-0" placeholder="Imię *" required #offFirstName="ngModel"> 
+            </div>
+            <div class="form-group">
+
+                <div *ngIf="offSurrname.errors; else elseBlockSurr" class="form-group">
+                    <p class="Alert" class="alerts">{{surrAlert}}</p>
+                </div>
+            <ng-template #elseBlockSurr>
+                <div class="form-group">
+                    <p class="Alert" class="passes">{{surrPass}}</p>
+                </div>
+            </ng-template>
+
+                <input [(ngModel)]="registerUserData.surname" value=""  name="surname" type="text" class="form-control rounded-0"placeholder="Nazwisko *" required #offSurrname="ngModel">
+            </div>
+            <div class="form-group">
+
+                <div *ngIf="offEmail.errors; else elseBlockEmail" class="form-group">
+                    <p class="Alert" class="alerts">{{emailAlert}}</p>
+                </div>
+            <ng-template #elseBlockEmail>
+                <div class="form-group">
+                    <p class="Alert" class="passes">{{emailPass}}</p>
+                </div>
+            </ng-template>
+
+                <input [(ngModel)]="registerUserData.email" value=""  name="email" type="text" class="form-control rounded-0" placeholder="Email *" required [pattern]="emailPattern" #offEmail="ngModel">
+            </div>
+            <div class="form-group">
+
+                <div *ngIf="offPasswd.errors; else elseBlockPass" class="form-group">
+                    <p class="Alert" class="alerts">{{passAlert}}</p>
+                </div>
+            <ng-template #elseBlockPass>
+                <div class="form-group">
+                    <p class="Alert" class="passes">{{passPass}}</p>
+                </div>
+            </ng-template> 
+
+                <input [(ngModel)]="registerUserData.password" value=""  name="password" type="password" class="form-control rounded-0 "placeholder="Hasło *" required [pattern]="passwdPattern" #offPasswd="ngModel">
+            </div>
+            <div class="form-group">
+
+                <div *ngIf="offAge.errors; else elseBlockAge" class="form-group">
+                    <p class="Alert" class="alerts">{{ageAlert}}</p>
+                </div>
+            <ng-template #elseBlockAge>
+                <div class="form-group">
+                    <p class="Alert" class="passes">{{agePass}}</p>
+                </div>
+            </ng-template> 
+
+                <input [(ngModel)]="registerUserData.age" value=""  name="age" type="text" class="form-control rounded-0" placeholder="Wiek *" required [pattern]="agePattern" #offAge="ngModel">
+            </div>
+            <div class="form-group">
+
+                <div *ngIf="offProvince.errors; else elseBlockProv" class="form-group">
+                    <p class="Alert" class="alerts">{{provAlert}}</p>
+                </div>
+            <ng-template #elseBlockProv>
+                <div class="form-group">
+                    <p class="Alert" class="passes">{{provPass}}</p>
+                </div>
+            </ng-template>
+
+                <input [(ngModel)]="registerUserData.province" value=""  name="province" type="text" class="form-control rounded-0" placeholder="Województwo *" required #offProvince="ngModel">
+            </div>
+            <div class="form-group">
+
+                <div *ngIf="offCity.errors; else elseBlockCity" class="form-group">
+                    <p class="Alert" class="alerts">{{cityAlert}}</p>
+                </div>
+            <ng-template #elseBlockCity>
+                <div class="form-group">
+                    <p class="Alert" class="passes">{{cityPass}}</p>
+                </div>
+            </ng-template>
+
+                <input [(ngModel)]="registerUserData.city" value=""  name="city" type="text" class="form-control rounded-0" placeholder="Miasto *" required #offCity="ngModel">
+            </div>
+            <div class="form-group">
+                <input (click)="registerUser(offEmail, offAge, offPasswd, offFirstName, offSurrname, offProvince, offCity)" type="submit" class="btnSubmit" value="Rejestracja" />
+            </div>
+        </form>
+
+</div>
+
+

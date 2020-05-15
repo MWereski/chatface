@@ -1,0 +1,39 @@
+.list {
+
+    display: flex;
+    flex-direction: column;
+
+    .list-title {
+        text-align: center;
+    }
+    
+    .list-item {
+        background: white;
+        border-radius: 5px;;
+        margin-top:2px;
+        width:200px;
+        align-self: flex-end; 
+
+        .user-name {
+            margin-left:5px;
+        }
+
+        .status {
+            min-width:10px;
+            min-height: 10px;
+            border-radius: 50%;
+            background: green;
+            margin-left: 20px;
+        }
+
+        .status__red {
+            @extend .status;
+            background-color: red;
+        }
+
+        &:hover {
+            background-color: #757575;
+            cursor: pointer;
+        }
+    }
+}
